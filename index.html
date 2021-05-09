@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <h2>Formulário de Cadastro</h2>
+  <form method="POST" action="" enctype="multipart/form-data">
+    
+    <input type="hidden" name="country" value="BR" />
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <label>
+        Primeiro Nome:<br/>
+        <input type="text" name="name" required minlength="3" maxlength="20"/>
+      </label><br/>
+      <label>
+        Sobrenome:<br/>
+        <input type="text" name="lastname" required/>
+      </label><br/>
+      <label>
+        E-mail:<br/>
+        <input type="text" name="email" required pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9_.]+$)" title="endereço de e-mail" />
+      </label><br/>
+      <label>
+        Foto:<br/>
+        <input type="file" name="photo" accept="image/*" />
+      </label><br/>
+      <label>
+        Arquivo pdf:<br/>
+        <input type="file" name="file" accept="application/pdf" />
+      </label><br/>
+      <label>
+        Idade:<br/>
+        <input type="number" name="age" required min="0" step="1" max="10"/>
+      </label><br/>
+      <label>
+        Data de nascimento:<br/>
+        <input type="date" name="birthday" required min="2021-05-10" max="2021-06-10"/>
+      </label><br/>
+    </fieldset>
+    <fieldset>
+        <legend>Dados Profissionais</legend>
+      <label>
+        Nome da empresa:<br/>
+        <input type="text" name="companyname"/>
+      </label><br/>
+      <label>
+        Cargo na empresa:<br/>
+        <input type="text" name="companyjobtitle"/>
+      </label><br/>
+    </fieldset>
+      
+    <input type="submit" value="Cadastrar" />
+
+  </form>
+  
+</body>
+</html>
